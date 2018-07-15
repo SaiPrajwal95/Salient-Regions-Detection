@@ -9,3 +9,5 @@ This repository contains the code that outputs set of salient rectangular region
 ## Usage
 python test_file.py
 
+## Note
+Make sure to change the parameters from the default values in test_file.py as per your requirements.
