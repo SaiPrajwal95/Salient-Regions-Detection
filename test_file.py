@@ -13,10 +13,12 @@ def drawRects(img, sal_regions):
     cv2.imshow('Sal Regs', img)
     cv2.waitKey(0)
     cv2.destroyAllWindows()
+    cv2.imwrite('results/salient_regions.jpg',img)
 
 if __name__ == '__main__':
     impath = 'images/men.jpg'
     img = cv2.imread(impath)
     sal_mask = BMS_thresh(impath,0.5) # Threshold for saliency map
     sal_regions = find_sal_regions(sal_mask,0.005) # Threshold for min area
-    drawRects(img, sal_regions)                                           # of region
+                                                   # of region
+    drawRects(img, sal_regions)
